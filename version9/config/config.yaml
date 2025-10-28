@@ -1,0 +1,15 @@
+experiment_name: Net
+
+save_path       : ./checkpoints/
+output_path     : ./output/
+data_path: ./data/test
+
+# training params
+device: 'cuda'
+rand_seed: 42
+num_epochs: 1000
+lr: 0.001
+reg_noise_std: 0.01
+thresh: 600
+alpha: 20
+model: Unet
