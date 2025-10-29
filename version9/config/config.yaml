@@ -7,9 +7,12 @@ data_path: ./data/test
 # training params
 device: 'cuda'
 rand_seed: 42
-num_epochs: 1000
-lr: 0.001
+num_epochs_fuse: 1000
+num_epochs_enhance: 2000
+lr_fuse: 0.001
+lr_enhance: 0.001
 reg_noise_std: 0.01
 thresh: 600
 alpha: 20
+save_interval: 50
 model: Unet

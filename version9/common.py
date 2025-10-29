@@ -64,3 +64,12 @@ def gradient(input1):
     filter1 = filter1.repeat_interleave(c, dim=1)
     d = torch.nn.functional.conv2d(input1, filter1, bias=None, stride=1, padding=1)
     return d
+
+def get_max_rgb(img_tensor):
+    img = torch.max(img_tensor,dim=1,keepdim=True)[0]
+    return img
+
+if __name__ == "__main__":
+    x = torch.randn(1, 3, 256, 256)
+    y = get_max_rgb(x)
+    print(y.shape)
